@@ -88,11 +88,11 @@ class Graph:
     
     def bfs(self, start_vertex: Any, target: Optional[Any] = None) -> List[Any]:
         """
-        Обход графа в ширину (Breadth-First Search)
+        Обход графа в ширину
         
         Args:
             start_vertex: Вершина, с которой начинается обход
-            target: Целевая вершина для поиска (опционально)
+            target: Целевая вершина для поиска
         
         Returns:
             Список вершин в порядке обхода BFS
@@ -124,11 +124,11 @@ class Graph:
     
     def dfs(self, start_vertex: Any, target: Optional[Any] = None) -> List[Any]:
         """
-        Обход графа в глубину (Depth-First Search) - итеративная версия
+        Обход графа в глубину
         
         Args:
             start_vertex: Вершина, с которой начинается обход
-            target: Целевая вершина для поиска (опционально)
+            target: Целевая вершина для поиска
         
         Returns:
             Список вершин в порядке обхода DFS
@@ -165,7 +165,7 @@ class Graph:
         
         Args:
             start_vertex: Вершина, с которой начинается обход
-            target: Целевая вершина для поиска (опционально)
+            target: Целевая вершина для поиска
         
         Returns:
             Список вершин в порядке обхода DFS
@@ -255,7 +255,6 @@ class Graph:
 # Пример использования
 if __name__ == "__main__":
     # Создаем неориентированный граф
-    print("=== Неориентированный граф ===")
     graph = Graph(directed=False)
     
     # Добавляем вершины и ребра
@@ -281,7 +280,6 @@ if __name__ == "__main__":
     print("\nПоиск пути от 'A' до 'F' (BFS):", graph.bfs_path('A', 'F'))
     
     # Создаем ориентированный граф
-    print("\n\n=== Ориентированный граф ===")
     digraph = Graph(directed=True)
     
     digraph.add_edge('A', 'B')
@@ -292,4 +290,5 @@ if __name__ == "__main__":
     
     print(digraph)
     print("\nBFS обход, начиная с 'A':", digraph.bfs('A'))
-    print("DFS обход (итеративный), начиная с 'A':", digraph.dfs('A'))
+
+    print("DFS обход, начиная с 'A':", digraph.dfs('A'))
